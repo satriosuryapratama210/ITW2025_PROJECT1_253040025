@@ -1,0 +1,474 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    overflow-x: hidden;
+    background-color: rgb(248, 248, 248);
+}
+
+/* Navbar */
+
+nav {
+    display: flex;
+    background-color: rgb(0, 145, 255);
+    justify-content: space-around;
+    padding: 30px 0;
+    color: white;
+    align-items: center;
+    box-shadow: 0 0 9px rgb(48, 48, 48);
+    z-index: 999;
+    width: 100%;
+}
+
+.namaw {
+    font-size: 20px;
+    font-family: "Sekuya", system-ui;
+    font-style: normal;
+    color: black;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Hamburger */
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    left: -11px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
+    transition: all 1s;
+}
+
+/* Hamburger menu Animasi */
+
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    transform: rotate(40deg); translate: -1px,-1px ;
+}
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    transform: rotate(-40deg); translate: -1px, 0px;
+}
+.menu-toggle input:checked ~ span:nth-child(3){
+    transform: scale(0);
+}
+
+/* Responsive Breakpoint */
+
+@media screen and (max-width: 768px){
+    nav ul {
+        width: 50%s;
+    }
+}
+/* Mobile */
+
+@media screen and (max-width: 576px){
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 50vh;
+        padding-top: 50px;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: rgb(213, 212, 212);
+        flex-direction: column;
+        transform: translateY(-100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+nav ul.slide {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* BODY SLIDE 1 */ 
+
+/* HAL SATU */
+
+.hello {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10% auto 0;
+    z-index: -2;
+    width: 95%;
+    margin-left: 5%;
+}
+
+.hello1 {
+    width: 70%;
+}
+
+.hello1 h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hello1 h1 span {
+    color: rgb(0, 145, 255);
+}
+
+.grs {
+    width: 550px;
+    height: 1px;
+    margin: 12px 0 20px;
+    background-color: darkgrey;
+}
+
+.hello1 h2 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.hello1 p {
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 70px;
+}
+
+/* button */
+
+.helo-button {
+    display: flex;
+    gap: 20px;
+}
+
+.helo-button a {
+    text-decoration: none;
+    border: 2px solid rgb(0, 145, 255);
+    padding: 10px;
+    color: rgb(0, 145, 255);
+    border-radius: 4px;
+    transition: .3s;
+}
+
+.helo-button a:hover {
+    background-color: rgb(0, 145, 255);
+    color: black;
+    font-weight: bold;
+}
+
+.helloimg {
+    width: 30%;
+    display: flex;
+    align-items: end;
+    margin-right: 5%;
+}
+
+.helloimg .foto img{
+   width: 70%;
+   margin-left: 100px;
+   border-radius: 15px;
+   margin-top: -50px;
+   border: 4px solid rgb(0, 145, 255);
+   box-shadow: 5px 10px 8px darkgrey;
+}
+
+.helloimg .foto {
+    display: flex;
+}
+
+/* HALAMAN 2 NYA BROOOO */
+
+#hal2 {
+    margin: 11% auto 0;
+    width: 95%;
+    margin-left: 5%;
+}
+
+#hal2 .kotak {
+    display: flex;
+    width: 95%;
+    margin: 5% auto 0;
+}
+
+.fabout {
+    width: 40%;
+}
+
+.fabout img {
+    width: 70%;
+    border: 4px solid rgb(0, 145, 255);
+    border-radius: 15px;
+    box-shadow: 3px 2px 4px darkgrey;
+}
+
+.about {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about .summary {
+    height: 50%;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 5px 4px 8px darkgrey;
+    padding: 10px;
+}
+
+/* nanti untuk mengatur p dan h tinggal .about .... lalu atur font width dll */
+
+.about .education {
+    height: 50%;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 5px 4px 8px darkgrey;
+}
+
+/* NAH INI HALAMAN TIGA NYA  */
+
+#hal3 {
+    margin: 11% auto 11%;
+    width: 95%;
+    text-align: center;
+    /* background-color: black; */
+}
+
+#hal3 .container3 {
+    margin: auto;
+    display: flex;
+    margin-top: 5%;
+    gap: 50px;
+    height: 100%;
+    align-items: center;
+}
+
+.card3 {
+    background-color: white;
+    box-shadow: 0 12px 60px darkgrey;
+    flex: 1;
+    width: 30%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.card3 h3 {
+    padding-bottom: 10%;
+    padding-top: 10%;
+    text-align: center;
+}
+
+.card3 img {
+    width: 80%;
+    border-radius: 10px ;
+    padding-top: 30px;
+}
+
+#hal3 .container2 {
+    margin: auto;
+    display: flex;
+}
+
+.card2 {
+    background-color: white;
+    box-shadow: 0 12px 60px darkgrey;
+    flex: 1;
+    width: 30%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.card2 h3 {
+    padding-bottom: 10%;
+    padding-top: 10%;
+}
+
+.card2 img {
+    width: 80%;
+    border-radius: 10px;
+    padding-top: 30px;
+}
+
+#hal3 .container1 {
+    margin: auto;
+    display: flex;
+}
+
+.card1 {
+    background-color: white;
+    box-shadow: 0 12px 60px darkgrey;
+    width: 30%;
+    flex: 1;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.card1 h3 {
+    padding-bottom: 10%;
+    padding-top: 10%;
+
+}
+
+.card1 img {
+    width: 80%;
+    border-radius: 10px;
+    padding-top: 30px;
+}
+
+/* HALAMAN 4 */
+
+#hal4 {
+    margin: 11% auto 11%;
+    width: 95%;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    /* background-color: black; */
+    gap: 50px;
+}
+
+#hal4 .lp1, .lp2, .lp3 {
+    background-color: white;
+    height: 200px;
+    width: 90%;
+    margin: 20px auto 20px ;
+    display: flex;
+    align-items: start;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 5px;
+    box-shadow: 0 12px 60px darkgrey;
+}
+
+.lp1 img, h3, button {
+    height: 90%;
+    align-items: center;
+    display: flex;
+    margin: auto 0 auto;
+}
+
+.lp1 button {
+    height: 20%;
+    padding: 20px;
+    color: white;
+    background-color: rgb(0, 145, 255);
+}
+.lp2 img, h3, button {
+    height: 90%;
+    align-items: center;
+    display: flex;
+    margin: auto 0 auto;
+}
+
+.lp2 button {
+    height: 20%;
+    padding: 20px;
+    color: white;
+    background-color: rgb(0, 145, 255);
+}
+.lp3 img, h3, button {
+    height: 90%;
+    align-items: center;
+    display: flex;
+    margin: auto 0 auto;
+}
+
+.lp3 button {
+    height: 20%;
+    padding: 20px;
+    color: white;
+    background-color: rgb(0, 145, 255);
+}
+
+#hal4 img {
+    border-radius: 5px;
+}
+
+/* Contact */
+
+#hal5 form {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    margin: 5% auto 0;
+    gap: 20px;
+}
+
+#hal5 input {
+    padding: 20px;
+    font-size: 16px;
+}
+
+#hal5 input:focus {
+    background-color: rgb(0, 145, 255);
+    color: white;
+    border: 5px solid white;
+}
+
+#hal5 input:focus::placeholder {
+    color: black;
+}
+
+#hal5 textarea {
+    height: 100px;
+    padding: 20px;
+    font-size: 16px;
+}
+
+#hal5 textarea:focus {
+    background-color: rgb(0, 145, 255);
+    color: white;
+    border: 5px solid white;
+}
+
+#hal5 textarea:focus::placeholder {
+    color: black;
+}
