@@ -4,7 +4,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: "Aboreto", sans-serif;
     overflow-x: hidden;
     background-color: rgb(248, 248, 248);
 }
@@ -99,39 +99,7 @@ nav ul li a:hover {
     transform: scale(0);
 }
 
-/* Responsive Breakpoint */
 
-@media screen and (max-width: 768px){
-    nav ul {
-        width: 50%s;
-    }
-}
-/* Mobile */
-
-@media screen and (max-width: 576px){
-    nav ul {
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: 50vh;
-        padding-top: 50px;
-        align-items: center;
-        justify-content: space-evenly;
-        background-color: rgb(213, 212, 212);
-        flex-direction: column;
-        transform: translateY(-100%);
-        transition: all 1s;
-        opacity: 0;
-    }
-    .menu-toggle {
-        display: flex;
-    }
-}
-
-nav ul.slide {
-    transform: translateY(0);
-    opacity: 1;
-}
 
 /* BODY SLIDE 1 */ 
 
@@ -145,6 +113,7 @@ nav ul.slide {
     z-index: -2;
     width: 95%;
     margin-left: 5%;
+    font-family: "Alice";
 }
 
 .hello1 {
@@ -226,7 +195,10 @@ nav ul.slide {
 #hal2 {
     margin: 11% auto 0;
     width: 95%;
-    margin-left: 5%;
+}
+
+#hal2 h1 {
+    text-align: center;
 }
 
 #hal2 .kotak {
@@ -251,6 +223,7 @@ nav ul.slide {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
 }
 
 .about .summary {
@@ -261,13 +234,37 @@ nav ul.slide {
     padding: 10px;
 }
 
-/* nanti untuk mengatur p dan h tinggal .about .... lalu atur font width dll */
+.about .summary p {
+    font-size: 20px;
+    font-family: "Space Grotesk";
+}
+
+.about .summary:hover {
+    background-color: rgb(0, 145, 255);
+    color: white;
+}
 
 .about .education {
     height: 50%;
     background-color: white;
     border-radius: 6px;
     box-shadow: 5px 4px 8px darkgrey;
+    padding: 10px;
+}
+
+.education ul li {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 10px;
+    justify-items: center;
+    margin: 0;
+    list-style-type: none;
+    font-family: "Space Grotesk";
+}
+
+.about .education:hover {
+    background-color: rgb(0, 145, 255) ;
+    color: white;
 }
 
 /* NAH INI HALAMAN TIGA NYA  */
@@ -298,6 +295,11 @@ nav ul.slide {
     flex-direction: column;
 }
 
+.card3:hover {
+    background-color: rgb(0, 145, 255);
+    color: white;
+}
+
 .card3 h3 {
     padding-bottom: 10%;
     padding-top: 10%;
@@ -325,6 +327,11 @@ nav ul.slide {
     flex-direction: column;
 }
 
+.card2:hover {
+    background-color: rgb(0, 145, 255);
+    color: white;
+}
+
 .card2 h3 {
     padding-bottom: 10%;
     padding-top: 10%;
@@ -349,6 +356,11 @@ nav ul.slide {
     align-items: center;
     display: flex;
     flex-direction: column;
+}
+
+.card1:hover {
+    background-color: rgb(0, 145, 255);
+    color: white;
 }
 
 .card1 h3 {
@@ -401,6 +413,12 @@ nav ul.slide {
     color: white;
     background-color: rgb(0, 145, 255);
 }
+
+.lp1 a {
+    color: white;
+    text-decoration: none;
+}
+
 .lp2 img, h3, button {
     height: 90%;
     align-items: center;
@@ -414,9 +432,14 @@ nav ul.slide {
     color: white;
     background-color: rgb(0, 145, 255);
 }
+
+.lp2 a {
+    color: white;
+    text-decoration: none;
+}
+
 .lp3 img, h3, button {
     height: 90%;
-    align-items: center;
     display: flex;
     margin: auto 0 auto;
 }
@@ -426,6 +449,11 @@ nav ul.slide {
     padding: 20px;
     color: white;
     background-color: rgb(0, 145, 255);
+}
+
+.lp3 a {
+    color: white;
+    text-decoration: none;
 }
 
 #hal4 img {
@@ -440,6 +468,17 @@ nav ul.slide {
     width: 35%;
     margin: 5% auto 0;
     gap: 20px;
+}
+
+#hal5 button {
+    padding: 30px;
+}
+
+#hal5 button a {
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(0, 145, 255);
+    margin: 0 auto 0;
 }
 
 #hal5 input {
@@ -471,4 +510,108 @@ nav ul.slide {
 
 #hal5 textarea:focus::placeholder {
     color: black;
+}
+
+.footer {
+    background-color: rgb(0, 145, 255);
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+}
+
+/* Responsive Breakpoint */
+
+@media screen and (max-width: 768px){
+    nav ul {
+        width: 50%;
+    }
+
+    .hello {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hello h1, h2, p {
+        text-align: center;
+    }
+
+    .hello hr {
+        opacity: 0;
+    }
+
+    .helloimg {
+        opacity: 0;
+    }
+
+    .helo-button {
+        justify-content: center;
+    }
+
+    .about .summary p {
+        font-size: 14px;
+    }
+
+    
+
+    #hal5 form {
+        width: 100%;
+    }
+}
+/* Mobile */
+
+@media screen and (max-width: 576px){
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 50vh;
+        padding-top: 50px;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: rgb(213, 212, 212);
+        flex-direction: column;
+        transform: translateY(-100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+
+    #hal2 .kotak {
+        flex-direction: column;
+        align-items: center;   
+    }
+    
+    #hal2 {
+        margin-left: 0;
+    }
+
+    .fabout {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5%;
+    }
+
+    .about .summary {
+        text-align: center;
+    }
+
+    #hal4 .lp1, .lp2, .lp3 {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    #hal5 form {
+        width: 100%;
+    }
+}
+
+nav ul.slide {
+    transform: translateY(0);
+    opacity: 1;
 }

@@ -6,6 +6,10 @@
     <title>MY CV</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sekuya&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -34,10 +38,10 @@
             <H1>Hello, Saya <span>Satrio Surya <br> Pratama</span></H1>
             <hr class="grs">
             <h2>Web Developer & UI Designer</h2>
-            <p>Saya membangun website dengan cepat, responsif dan memiliki estetika yang sangat indah.</p>
+            <p>Saya membangun website dengan cepat, responsif dan memiliki estetika yang  indah.</p>
             <div class="helo-button">
-                <a href="">Lihat Portofolio</a>
-                <a href="">Hubungi Saya</a>   
+                <a href="#hal4">Lihat Portofolio</a>
+                <a href="#hal5">Hubungi Saya</a>   
             </div>
         </div>
         <div class="helloimg">
@@ -58,9 +62,18 @@
             <div class="summary">
                 <h1>SUMMARY</h1>
                 <br>
-                <p>HELLO! I'm Satrio Surya Pratama, I am an Informatics Engineering student with a strong interest in frontend web development.</p>
+                <p>HELLO! I'm Satrio Surya Pratama, I am an Informatics Engineering student with a strong interest in frontend web development. I am experienced in building staticwebsites using pure HTML and CSS with a focus and clean, semantic structure and responsive desaign.  I have a solid understanding of layout techniques such as Flexbox and Grid, basic UI/UX principles, and I am capable of working independently while maintaining well-organized and readable code. I am committed to continuously improving my technical and design skills to deliver functional, aesthetically pleasing, and user-friendly web interfaces. </p>
             </div>
-            <div class="education"></div>
+            <div class="education">
+                <h1>EDUCATION</h1>
+                <br>
+                    <ul>
+                        <li>2014 - 2019: SDN Pameungpeuk 1</li>
+                        <li>2020 - 2022: Mts. Persis 03 Pameungpeuk</li>
+                        <li>2022 - 2025: SMAN 1 Banjaran</li>
+                        <li>2025 - NOW: Universitas Pasundan</li>
+                    </ul>
+                </div>
             </div>
         </div>
      </section>
@@ -71,16 +84,16 @@
         <h1>Hobby</h1>
         <div class="container3">
             <div class="card3">
-                <img src="img/fotomy1.jpg" alt="">
+                <img src="img/gunung.jpeg" alt="">
                     <h3>Camping</h3>
             </div>
             <div class="card2">
-                <img src="img/fotomy1.jpg" alt="">
-                    <h3>Swimming</h3>
+                <img src="img/lari.jpeg" alt="">
+                    <h3>Running</h3>
             </div>
             <div class="card1">
-                <img src="img/fotomy1.jpg" alt="">
-                    <h3>Running</h3>
+                <img src="img/bola.jpeg" alt="">
+                    <h3>Watching Football</h3>
             </div>
         </div>
 
@@ -89,19 +102,19 @@
         <h1>Latest Projecct</h1>
         <div class="container">
             <div class="lp1">
-                <img src="img/eliano.jpg" alt="">
+                <img src="img/web1.png" alt="">
                 <h3>Portofolio Web</h3>
-                <button href="">View Details</button>
+                <button href=""><a href="https://github.com/satriosuryapratama210/itw2025_a_253040025">View Details</a></button>
             </div>
             <div class="lp2">
-                <img src="img/eliano.jpg" alt="">
-                <h3>Portofolio Web</h3>
-                <button href="">View Details</button>
+                <img src="img/web2.png" alt="">
+                <h3>Article Web</h3>
+                <button href=""><a href="https://github.com/satriosuryapratama210/itw2025_a_253040025">View Details</a></button>
             </div>
             <div class="lp3">
-                <img src="img/eliano.jpg" alt="">
-                <h3>Portofolio Web</h3>
-                <button href="">View Details</button>
+                <img src="img/web3.png" alt="">
+                <h3>Flexbox training</h3>
+                <button href=""><a href="https://github.com/satriosuryapratama210/itw2025_a_253040025">View Details</a></button>
             </div>
         </div>
      </section>
@@ -109,18 +122,32 @@
      <!-- BODY HAL 5 -->
      <section id="hal5">
         <h1>Contact</h1>
-        <form action="">
-            <input type="text" placeholder="Nama Kamu">
-            <input type="email" placeholder="Email Kamu">
-            <textarea name="" id="" placeholder="Ada Pesan Apa nih???"></textarea>
-            <input type="submit" name="" id="" placeholder="kirim">
+        <form action="" name="contact-form">
+            <input type="text" name="nama" placeholder="Nama Kamu">
+            <input type="email" name="email" placeholder="Email Kamu">
+            <textarea name="pesan" id="" placeholder="Ada Pesan Apa nih???"></textarea>
+            <button type="submit" name="kirim" id="kirim" placeholder="kirim"> <a href="">kirim</a>
         </form>
      </section>
-
      </section>
 
-     <footer></footer>
+     <footer class="footer">
+        <p>2025 OZ.</p>
+     </footer>
     <!-- java script -->
      <script src="js/script.js"></script>
+
+     <!-- script form -->
+     <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyZ2WjL_Yq1-Kw9Ek_YWU9OaBhlPizo4RTdngYOUq0-VnmFX8zWvkEmdzTMemeGCJ8O-A/exec'
+  const form = document.forms['contact-form']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 </body>
 </html>
